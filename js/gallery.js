@@ -1,6 +1,5 @@
-/************* DO NOT TOUCH CODE ABOVE THIS LINE ***************/
-
 // requestAnim shim layer by Paul Irish
+
     window.requestAnimFrame = (function(){
       return  window.requestAnimationFrame       || 
               window.webkitRequestAnimationFrame || 
@@ -12,7 +11,6 @@
               };
     })();
   
-
 // example code from mr doob : http://mrdoob.com/lab/javascript/requestanimationframe/
 
 animate();
@@ -62,6 +60,7 @@ if ($_GET["json"]){
 }else{
    mURL = "images.json"; 
 }
+//calls images from images.json
 var mRequest = new XMLHttpRequest();
 mRequest.onreadystatechange = function() {
     // Do something interesting if file is opened successfully
@@ -125,7 +124,7 @@ function goBack(){
         }
     });
 };
-//cycles forwards, also clicks through pictures
+//Allows you to go to next photo
 function goFor(){
         $('#nextPhoto').click(function(){
                 prevClicked=false;
@@ -141,7 +140,7 @@ function goFor(){
         }
     });
 };
-//hides/shows details 
+//Hide or show details
 function deets(){
     $('.moreIndicator').click(function(){ 
         console.log(mCurrentIndex);
@@ -162,7 +161,7 @@ function makeGalleryImageOnloadCallback(galleryImage) {
         galleryImage.img = e.target;
         mImages.push(galleryImage);
     }
-} //when doc loads, have these going/active i guess
+} //when doc loads, have these active
 $(document).ready( function() {
   $('.details').eq(0).hide();
   deets();
