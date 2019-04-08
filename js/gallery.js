@@ -16,7 +16,7 @@
 animate();
 
 var mLastFrameTime = 0;
-var mWaitTime = 5000; //time in ms
+var mWaitTime = 4000; //time in ms
 function animate() {
     requestAnimFrame( animate );
     var currentTime = new Date().getTime();
@@ -107,7 +107,7 @@ function setPhoto(){
     $('.description').text('Description: ' + mImages[mCurrentIndex].description);
     $('.date').text('Date: ' + mImages[mCurrentIndex].date); 
 }
-//cycles backwards, from 13 to 1 back to 13. also sets it to automatically go backwards
+//From slide 13 goes back to 1 and to 13. Also sets it to automatically go backwards
 var prevClicked = false;
 function goBack(){
         $('#prevPhoto').click(function(){
